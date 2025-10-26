@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ILLINOIS | Form</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- NAVIGATIONAL MENU -->
+        <nav>
+            <a href="index.html" rel="noopener noreferrer">Home</a>
+            <a href="springfield.html" rel="noopener noreferrer">Springfield</a>
+            <a href="chicago.html" rel="noopener noreferrer">Chicago</a>
+            <a href="oakbrook.html" rel="noopener noreferrer">Oakbrook</a>
+            <a href="form.html" rel="noopener noreferrer">Form</a>
+        </nav>
+
+        <!-- HEADER -->
+        <header>
+            <!-- Logo and State Name -->
+            <img src="img/illinois-logo.png" alt="Illinois Logo">
+            <br><br>
+            <h1>The State of Illinois</h1>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <!-- Web Form -->
+            <section>
+            <br><br>
+                <h2>Inquiry Form</h2>
+                <br>
+                <form onsubmit="return matchingEmails()">
+                    <p>Please fill out required fields.</p>
+                    <br>
+                    <label for="first-name">First Name:</label>
+                    <br>
+                    <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                    <br>
+                    <label for="last-name">Last Name:</label>
+                    <br>
+                    <input type="text" id="last-name" name="last-name" placeholder="Smith" required>
+                    <br>
+                    <label for="email">Email Address:</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="info@example.com" required>
+                    <br>
+                    <label for="confirmEmail">Confirm Email:</label>
+                    <br>
+                    <input type="email" id="confirmEmail" name="confirmEmail" placeholder="info@example.com" required>
+                    <br>
+                    <label for="inquiry-type">Inquiry Type:</label>
+                    <br>
+                    <select id="inquiry-type" name="inquiry-type" required>
+                        <option value="general">General</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="support">Support</option>
+                    </select>
+                    <br>
+                    <label for="message">Message/Question:</label>
+                    <br>
+                    <input type="text" id="message" name="message" placeholder="Write here..." required>
+                    <br>
+                    <button type="submit" id="Submit">Submit</button>
+                </form>
+                <br><br>
+                
+                <!-- Website Links to Illinois and its Cities -->
+                <h3>Website Links</h3>
+                <br>
+                <ul>
+                    <li><a href="https://www.illinois.gov/" target="_blank" rel="noopener noreferrer">The State of Illinois</a></li>
+                    <li><a href="https://www.springfield.il.us/" target="_blank" rel="noopener noreferrer">The City of Springfield</a></li>
+                    <li><a href="https://www.chicago.gov/city/en.html/" target="_blank" rel="noopener noreferrer">The City of Chicago</a></li>
+                    <li><a href="https://oak-brook.org/" target="_blank" rel="noopener noreferrer">The City of Oak Brook</a></li>
+                </ul>
+            </section>
+            
+            <!-- Aside Content: Images of Locations in Illinois -->
+            <aside>
+                <br><br>
+                <h3>Highlights</h3>
+                <br>
+                <br>
+                <img src="img/chicago-illinois.jpg" alt="Chicago, IL">
+                <br>
+                <img src="img/starved-rock.jpg" alt="Starved Rock State Park">
+            </aside>
+        </main>
+        
+        
+        <!-- FOOTER / Copyright -->
+        <footer>
+            <br>
+            <p>&copy; 2025 The State of Illinois. All rights reserved.</p>
+        </footer>
+
+        <!-- SCRIPT -->
+        <script>
+            function matchingEmails () {
+                const email = document.getElementById("email").value;
+                const confirmEmail = document.getElementById("confirmEmail").value;
+
+                if (email != confirmEmail) {
+                    alert("The email addresses do not match.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
